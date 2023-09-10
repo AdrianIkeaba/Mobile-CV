@@ -4,13 +4,10 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.DatePicker
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import com.ghostdev.resumeapp.databinding.ActivityEditBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -32,7 +29,7 @@ class EditActivity : AppCompatActivity() {
 
 
         binding.dobBtn.setOnClickListener {
-            showDatePickerDialog(binding.dobBtn)
+            showDatePickerDialog()
         }
 
         binding.saveTxt.setOnClickListener {
@@ -74,10 +71,10 @@ class EditActivity : AppCompatActivity() {
             }
         }
     }
-    private fun showDatePickerDialog(view: View) {
+    private fun showDatePickerDialog() {
         val datePicker = DatePickerDialog(
             this,
-            DatePickerDialog.OnDateSetListener { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
+            { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
                 // Update the selected date in the TextView
                 calendar.set(year, month, dayOfMonth)
                 val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
