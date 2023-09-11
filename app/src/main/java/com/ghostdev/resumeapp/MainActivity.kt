@@ -30,12 +30,14 @@ class MainActivity : AppCompatActivity() {
         val location = sharedPreferences.getString("location", "Lagos, NG")
         val slack = sharedPreferences.getString("slack", "Ikeaba Adrian")
         val github = sharedPreferences.getString("github", "AdrianIkeaba")
+        val dob = sharedPreferences.getString("dob", "05-07-2004")
         val bio = sharedPreferences.getString("bio", "I am an experienced android developer with over a decade of experience in tech and 4 years as an android developer. Proficient in Kotlin with an understadning of Java as well. I have profound knowledge in API integration, databases, firebase and architectural patterns such as MVVM. Currently a student at Babcock University studying Computer science at 300 level.")
 
         if (edit) {
             binding.nameTxt.text = name
             binding.positionTxt.text = position
             binding.locationTxt.text = location
+            binding.dobTxt.text = dob
             binding.slackTxt.text = slack
             binding.gitHubTxt.text = github
             binding.bioText.text = bio
