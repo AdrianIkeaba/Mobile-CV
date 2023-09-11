@@ -204,6 +204,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
                 app:backgroundTint="#686868"
+                app:icon="@drawable/baseline_date_range_24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/jobTitleEdt" />
 
