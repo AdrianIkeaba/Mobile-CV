@@ -19,6 +19,17 @@ class MainActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.back)
 
         binding.editFab.setOnClickListener {
+            val editor = sharedPreferences.edit()
+            editor.putString("name", binding.nameTxt.text.toString())
+            editor.putString("position", binding.positionTxt.text.toString())
+            editor.putString("location", binding.locationTxt.text.toString())
+            editor.putString("dob", binding.dobTxt.text.toString())
+            editor.putString("slack", binding.slackTxt.text.toString())
+            editor.putString("github", binding.gitHubTxt.text.toString())
+            editor.putString("bio", binding.bioText.text.toString())
+            editor.putBoolean("edit", true)
+            editor.apply()
+
             val intent = Intent(this@MainActivity, EditActivity::class.java)
             startActivity(intent)
         }

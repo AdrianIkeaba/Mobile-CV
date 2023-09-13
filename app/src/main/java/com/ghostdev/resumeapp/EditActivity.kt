@@ -26,7 +26,7 @@ class EditActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("cv_app", Context.MODE_PRIVATE)
 
-        if (sharedPreferences.getBoolean("edit", false)) {
+        if (!sharedPreferences.getBoolean("edit", false)) {
             binding.fullnameEdt.setText("Ikeaba Adrian")
             binding.positionEdt.setText("Android developer")
             binding.locationEd.setText("Lagos, NG")
