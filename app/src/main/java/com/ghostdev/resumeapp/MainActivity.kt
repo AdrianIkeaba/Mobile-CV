@@ -3,8 +3,8 @@ package com.ghostdev.resumeapp
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.ghostdev.resumeapp.databinding.ActivityMainBinding
 

@@ -26,6 +26,32 @@ class EditActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("cv_app", Context.MODE_PRIVATE)
 
+        if (sharedPreferences.getBoolean("edit", false)) {
+            binding.fullnameEdt.setText("Ikeaba Adrian")
+            binding.positionEdt.setText("Android developer")
+            binding.locationEd.setText("Lagos, NG")
+            binding.slackEd.setText("Ikeaba Adrian")
+            binding.dobEd.setText("05-07-2004")
+            binding.githubEd.setText("AdrianIkeaba")
+            binding.bioEd.setText("I am an experienced android developer with over a decade of experience in tech and 4 years as an android developer. Proficient in Kotlin with an understadning of Java as well. I have profound knowledge in API integration, databases, firebase and architectural patterns such as MVVM. Currently a student at Babcock University studying Computer science at 300 level.")
+        } else {
+            val name = sharedPreferences.getString("name", "Ikeaba Adrian")
+            val position = sharedPreferences.getString("position","Android developer")
+            val location = sharedPreferences.getString("location", "Lagos, NG")
+            val slack = sharedPreferences.getString("slack", "Ikeaba Adrian")
+            val github = sharedPreferences.getString("github", "AdrianIkeaba")
+            val dob = sharedPreferences.getString("dob", "05-07-2004")
+            val bio = sharedPreferences.getString("bio", "I am an experienced android developer with over a decade of experience in tech and 4 years as an android developer. Proficient in Kotlin with an understadning of Java as well. I have profound knowledge in API integration, databases, firebase and architectural patterns such as MVVM. Currently a student at Babcock University studying Computer science at 300 level.")
+
+            binding.fullnameEdt.setText(name)
+            binding.positionEdt.setText(position)
+            binding.locationEd.setText(location)
+            binding.slackEd.setText(slack)
+            binding.githubEd.setText(github)
+            binding.dobEd.setText(dob)
+            binding.bioEd.setText(bio)
+
+        }
 
 
         binding.dobBtn.setOnClickListener {

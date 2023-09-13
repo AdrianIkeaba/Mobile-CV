@@ -195,18 +195,20 @@
 
             <Button
                 android:id="@+id/dobBtn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
                 android:background="#000000"
                 android:text="Click to select DOB"
                 android:textColor="#FFFFFF"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 app:backgroundTint="#686868"
                 app:icon="@drawable/baseline_date_range_24"
+                app:layout_constraintEnd_toStartOf="@+id/dobEdt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/jobTitleEdt" />
+                app:layout_constraintTop_toBottomOf="@+id/locationEdt" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dobEdt"
